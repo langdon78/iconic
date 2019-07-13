@@ -36,6 +36,7 @@
 		BCE5D0FE22DA80F20054C4D2 /* iconicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iconicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE5D10222DA80F20054C4D2 /* iconicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iconicTests.swift; sourceTree = "<group>"; };
 		BCE5D10422DA80F20054C4D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCE5D10D22DA85770054C4D2 /* development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = development.xcconfig; path = config/development.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +60,7 @@
 		BCE5D0E122DA80F10054C4D2 = {
 			isa = PBXGroup;
 			children = (
+				BCE5D10D22DA85770054C4D2 /* development.xcconfig */,
 				BCE5D0EC22DA80F10054C4D2 /* iconic */,
 				BCE5D10122DA80F20054C4D2 /* iconicTests */,
 				BCE5D0EB22DA80F10054C4D2 /* Products */,
