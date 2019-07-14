@@ -8,3 +8,8 @@
 
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
+
+NOUN_URL_SCHEME = { your_url_scheme }
+NOUN_BASE_URL = { your_base_url }
+NOUN_API_CONSUMER_KEY = { your_api_consumer_key }
+NOUN_API_CONSUMER_SECRET = { your_api_consumer_secret }

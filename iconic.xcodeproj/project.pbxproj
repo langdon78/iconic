@@ -13,6 +13,11 @@
 		BCE5D0F522DA80F20054C4D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE5D0F422DA80F20054C4D2 /* Assets.xcassets */; };
 		BCE5D0F822DA80F20054C4D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE5D0F622DA80F20054C4D2 /* LaunchScreen.storyboard */; };
 		BCE5D10322DA80F20054C4D2 /* iconicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D10222DA80F20054C4D2 /* iconicTests.swift */; };
+		BCE5D11322DA89A60054C4D2 /* development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BCE5D11122DA89A60054C4D2 /* development.xcconfig */; };
+		BCE5D11422DA89A60054C4D2 /* development.sample.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BCE5D11222DA89A60054C4D2 /* development.sample.xcconfig */; };
+		BCE5D11722DA8A5E0054C4D2 /* NounAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D11622DA8A5E0054C4D2 /* NounAPIClient.swift */; };
+		BCE5D11922DB4D120054C4D2 /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D11822DB4D120054C4D2 /* AuthClient.swift */; };
+		BCE5D11B22DB572A0054C4D2 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D11A22DB57290054C4D2 /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +41,11 @@
 		BCE5D0FE22DA80F20054C4D2 /* iconicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iconicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE5D10222DA80F20054C4D2 /* iconicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iconicTests.swift; sourceTree = "<group>"; };
 		BCE5D10422DA80F20054C4D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BCE5D10D22DA85770054C4D2 /* development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = development.xcconfig; path = config/development.xcconfig; sourceTree = "<group>"; };
-		BCE5D10E22DA86EA0054C4D2 /* development.sample.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = development.sample.xcconfig; path = config/development.sample.xcconfig; sourceTree = "<group>"; };
+		BCE5D11122DA89A60054C4D2 /* development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = development.xcconfig; sourceTree = "<group>"; };
+		BCE5D11222DA89A60054C4D2 /* development.sample.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = development.sample.xcconfig; sourceTree = "<group>"; };
+		BCE5D11622DA8A5E0054C4D2 /* NounAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NounAPIClient.swift; sourceTree = "<group>"; };
+		BCE5D11822DB4D120054C4D2 /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
+		BCE5D11A22DB57290054C4D2 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +69,10 @@
 		BCE5D0E122DA80F10054C4D2 = {
 			isa = PBXGroup;
 			children = (
-				BCE5D10D22DA85770054C4D2 /* development.xcconfig */,
-				BCE5D10E22DA86EA0054C4D2 /* development.sample.xcconfig */,
 				BCE5D0EC22DA80F10054C4D2 /* iconic */,
 				BCE5D10122DA80F20054C4D2 /* iconicTests */,
 				BCE5D0EB22DA80F10054C4D2 /* Products */,
+				BCE5D11022DA89A60054C4D2 /* Config */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,12 +88,14 @@
 		BCE5D0EC22DA80F10054C4D2 /* iconic */ = {
 			isa = PBXGroup;
 			children = (
+				BCE5D11522DA8A220054C4D2 /* NounAPI */,
 				BCE5D0ED22DA80F10054C4D2 /* AppDelegate.swift */,
 				BCE5D0EF22DA80F10054C4D2 /* ViewController.swift */,
 				BCE5D0F122DA80F10054C4D2 /* Main.storyboard */,
 				BCE5D0F422DA80F20054C4D2 /* Assets.xcassets */,
 				BCE5D0F622DA80F20054C4D2 /* LaunchScreen.storyboard */,
 				BCE5D0F922DA80F20054C4D2 /* Info.plist */,
+				BCE5D11A22DB57290054C4D2 /* Configuration.swift */,
 			);
 			path = iconic;
 			sourceTree = "<group>";
@@ -98,6 +107,24 @@
 				BCE5D10422DA80F20054C4D2 /* Info.plist */,
 			);
 			path = iconicTests;
+			sourceTree = "<group>";
+		};
+		BCE5D11022DA89A60054C4D2 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				BCE5D11122DA89A60054C4D2 /* development.xcconfig */,
+				BCE5D11222DA89A60054C4D2 /* development.sample.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		BCE5D11522DA8A220054C4D2 /* NounAPI */ = {
+			isa = PBXGroup;
+			children = (
+				BCE5D11622DA8A5E0054C4D2 /* NounAPIClient.swift */,
+				BCE5D11822DB4D120054C4D2 /* AuthClient.swift */,
+			);
+			path = NounAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +210,8 @@
 			files = (
 				BCE5D0F822DA80F20054C4D2 /* LaunchScreen.storyboard in Resources */,
 				BCE5D0F522DA80F20054C4D2 /* Assets.xcassets in Resources */,
+				BCE5D11322DA89A60054C4D2 /* development.xcconfig in Resources */,
+				BCE5D11422DA89A60054C4D2 /* development.sample.xcconfig in Resources */,
 				BCE5D0F322DA80F10054C4D2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,6 +231,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCE5D0F022DA80F10054C4D2 /* ViewController.swift in Sources */,
+				BCE5D11B22DB572A0054C4D2 /* Configuration.swift in Sources */,
+				BCE5D11722DA8A5E0054C4D2 /* NounAPIClient.swift in Sources */,
+				BCE5D11922DB4D120054C4D2 /* AuthClient.swift in Sources */,
 				BCE5D0EE22DA80F10054C4D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,6 +278,7 @@
 /* Begin XCBuildConfiguration section */
 		BCE5D10522DA80F20054C4D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE5D11122DA89A60054C4D2 /* development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

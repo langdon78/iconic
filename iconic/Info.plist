@@ -20,6 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NOUN_BASE_URL</key>
+	<string>$(NOUN_BASE_URL)</string>
+	<key>NOUN_URL_SCHEME</key>
+	<string>$(NOUN_URL_SCHEME)</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
