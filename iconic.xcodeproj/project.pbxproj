@@ -12,14 +12,20 @@
 		BCE5D0F322DA80F10054C4D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE5D0F122DA80F10054C4D2 /* Main.storyboard */; };
 		BCE5D0F522DA80F20054C4D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE5D0F422DA80F20054C4D2 /* Assets.xcassets */; };
 		BCE5D0F822DA80F20054C4D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE5D0F622DA80F20054C4D2 /* LaunchScreen.storyboard */; };
-		BCE5D10322DA80F20054C4D2 /* CryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D10222DA80F20054C4D2 /* CryptoTests.swift */; };
+		BCE5D10322DA80F20054C4D2 /* EncryptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D10222DA80F20054C4D2 /* EncryptionTests.swift */; };
 		BCE5D11322DA89A60054C4D2 /* development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BCE5D11122DA89A60054C4D2 /* development.xcconfig */; };
 		BCE5D11422DA89A60054C4D2 /* development.sample.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BCE5D11222DA89A60054C4D2 /* development.sample.xcconfig */; };
 		BCE5D11722DA8A5E0054C4D2 /* NounAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D11622DA8A5E0054C4D2 /* NounAPIClient.swift */; };
 		BCE5D11922DB4D120054C4D2 /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D11822DB4D120054C4D2 /* AuthClient.swift */; };
 		BCE5D11B22DB572A0054C4D2 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D11A22DB57290054C4D2 /* Configuration.swift */; };
-		BCE5D11E22DB62050054C4D2 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D11D22DB62050054C4D2 /* Crypto.swift */; };
-		BCE5D12122DB71510054C4D2 /* MockCryptoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D12022DB71510054C4D2 /* MockCryptoData.swift */; };
+		BCE5D11E22DB62050054C4D2 /* EncryptionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D11D22DB62050054C4D2 /* EncryptionHandler.swift */; };
+		BCE5D12122DB71510054C4D2 /* MockEncryptionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D12022DB71510054C4D2 /* MockEncryptionData.swift */; };
+		BCE5D12422DB9B030054C4D2 /* URLComponents+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D12322DB9B030054C4D2 /* URLComponents+ext.swift */; };
+		BCE5D12622DB9D8E0054C4D2 /* MockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D12522DB9D8E0054C4D2 /* MockRequest.swift */; };
+		BCE5D12822DB9F3A0054C4D2 /* AuthClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D12722DB9F3A0054C4D2 /* AuthClientTests.swift */; };
+		BCE5D12B22DBB6A50054C4D2 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D12A22DBB6A50054C4D2 /* Icon.swift */; };
+		BCE5D12D22DBBAED0054C4D2 /* RecentUploads.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D12C22DBBAED0054C4D2 /* RecentUploads.swift */; };
+		BCE5D12F22DC05BE0054C4D2 /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D12E22DC05BE0054C4D2 /* IconCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,15 +47,21 @@
 		BCE5D0F722DA80F20054C4D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCE5D0F922DA80F20054C4D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCE5D0FE22DA80F20054C4D2 /* iconicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iconicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BCE5D10222DA80F20054C4D2 /* CryptoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTests.swift; sourceTree = "<group>"; };
+		BCE5D10222DA80F20054C4D2 /* EncryptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionTests.swift; sourceTree = "<group>"; };
 		BCE5D10422DA80F20054C4D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCE5D11122DA89A60054C4D2 /* development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = development.xcconfig; sourceTree = "<group>"; };
 		BCE5D11222DA89A60054C4D2 /* development.sample.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = development.sample.xcconfig; sourceTree = "<group>"; };
 		BCE5D11622DA8A5E0054C4D2 /* NounAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NounAPIClient.swift; sourceTree = "<group>"; };
 		BCE5D11822DB4D120054C4D2 /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
 		BCE5D11A22DB57290054C4D2 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		BCE5D11D22DB62050054C4D2 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
-		BCE5D12022DB71510054C4D2 /* MockCryptoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCryptoData.swift; sourceTree = "<group>"; };
+		BCE5D11D22DB62050054C4D2 /* EncryptionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionHandler.swift; sourceTree = "<group>"; };
+		BCE5D12022DB71510054C4D2 /* MockEncryptionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEncryptionData.swift; sourceTree = "<group>"; };
+		BCE5D12322DB9B030054C4D2 /* URLComponents+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLComponents+ext.swift"; sourceTree = "<group>"; };
+		BCE5D12522DB9D8E0054C4D2 /* MockRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRequest.swift; sourceTree = "<group>"; };
+		BCE5D12722DB9F3A0054C4D2 /* AuthClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClientTests.swift; sourceTree = "<group>"; };
+		BCE5D12A22DBB6A50054C4D2 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		BCE5D12C22DBBAED0054C4D2 /* RecentUploads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentUploads.swift; sourceTree = "<group>"; };
+		BCE5D12E22DC05BE0054C4D2 /* IconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +104,7 @@
 		BCE5D0EC22DA80F10054C4D2 /* iconic */ = {
 			isa = PBXGroup;
 			children = (
+				BCE5D12222DB9AE10054C4D2 /* Common */,
 				BCE5D11522DA8A220054C4D2 /* NounAPI */,
 				BCE5D0ED22DA80F10054C4D2 /* AppDelegate.swift */,
 				BCE5D0EF22DA80F10054C4D2 /* ViewController.swift */,
@@ -100,6 +113,7 @@
 				BCE5D0F622DA80F20054C4D2 /* LaunchScreen.storyboard */,
 				BCE5D0F922DA80F20054C4D2 /* Info.plist */,
 				BCE5D11A22DB57290054C4D2 /* Configuration.swift */,
+				BCE5D12E22DC05BE0054C4D2 /* IconCollectionViewCell.swift */,
 			);
 			path = iconic;
 			sourceTree = "<group>";
@@ -108,7 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				BCE5D11F22DB71310054C4D2 /* Mocks */,
-				BCE5D10222DA80F20054C4D2 /* CryptoTests.swift */,
+				BCE5D12722DB9F3A0054C4D2 /* AuthClientTests.swift */,
+				BCE5D10222DA80F20054C4D2 /* EncryptionTests.swift */,
 				BCE5D10422DA80F20054C4D2 /* Info.plist */,
 			);
 			path = iconicTests;
@@ -126,6 +141,7 @@
 		BCE5D11522DA8A220054C4D2 /* NounAPI */ = {
 			isa = PBXGroup;
 			children = (
+				BCE5D12922DBB6800054C4D2 /* Model */,
 				BCE5D11C22DB61E00054C4D2 /* AuthClient */,
 				BCE5D11622DA8A5E0054C4D2 /* NounAPIClient.swift */,
 			);
@@ -136,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				BCE5D11822DB4D120054C4D2 /* AuthClient.swift */,
-				BCE5D11D22DB62050054C4D2 /* Crypto.swift */,
+				BCE5D11D22DB62050054C4D2 /* EncryptionHandler.swift */,
 			);
 			path = AuthClient;
 			sourceTree = "<group>";
@@ -144,9 +160,27 @@
 		BCE5D11F22DB71310054C4D2 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				BCE5D12022DB71510054C4D2 /* MockCryptoData.swift */,
+				BCE5D12022DB71510054C4D2 /* MockEncryptionData.swift */,
+				BCE5D12522DB9D8E0054C4D2 /* MockRequest.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		BCE5D12222DB9AE10054C4D2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BCE5D12322DB9B030054C4D2 /* URLComponents+ext.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BCE5D12922DBB6800054C4D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BCE5D12A22DBB6A50054C4D2 /* Icon.swift */,
+				BCE5D12C22DBBAED0054C4D2 /* RecentUploads.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,12 +286,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCE5D11E22DB62050054C4D2 /* Crypto.swift in Sources */,
+				BCE5D11E22DB62050054C4D2 /* EncryptionHandler.swift in Sources */,
+				BCE5D12F22DC05BE0054C4D2 /* IconCollectionViewCell.swift in Sources */,
+				BCE5D12422DB9B030054C4D2 /* URLComponents+ext.swift in Sources */,
 				BCE5D0F022DA80F10054C4D2 /* ViewController.swift in Sources */,
 				BCE5D11B22DB572A0054C4D2 /* Configuration.swift in Sources */,
 				BCE5D11722DA8A5E0054C4D2 /* NounAPIClient.swift in Sources */,
 				BCE5D11922DB4D120054C4D2 /* AuthClient.swift in Sources */,
+				BCE5D12B22DBB6A50054C4D2 /* Icon.swift in Sources */,
 				BCE5D0EE22DA80F10054C4D2 /* AppDelegate.swift in Sources */,
+				BCE5D12D22DBBAED0054C4D2 /* RecentUploads.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,8 +303,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCE5D10322DA80F20054C4D2 /* CryptoTests.swift in Sources */,
-				BCE5D12122DB71510054C4D2 /* MockCryptoData.swift in Sources */,
+				BCE5D12822DB9F3A0054C4D2 /* AuthClientTests.swift in Sources */,
+				BCE5D10322DA80F20054C4D2 /* EncryptionTests.swift in Sources */,
+				BCE5D12122DB71510054C4D2 /* MockEncryptionData.swift in Sources */,
+				BCE5D12622DB9D8E0054C4D2 /* MockRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
