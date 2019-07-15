@@ -45,5 +45,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NOUN_API_CONSUMER_KEY</key>
+	<string>$(NOUN_API_CONSUMER_KEY)</string>
+	<key>NOUN_API_CONSUMER_SECRET</key>
+	<string>$(NOUN_API_CONSUMER_SECRET)</string>
 </dict>
 </plist>
