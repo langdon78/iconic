@@ -68,35 +68,3 @@ struct Uploader: Codable {
 struct Sponsor: Codable {
     
 }
-
-/*
- {
- "attribution": "Stool by John Winowiecki from Noun Project",
- "attribution_preview_url": "https://static.thenounproject.com/attribution/2621601-600.png",
- "date_uploaded": "2019-06-14",
- "id": "2621601",
- "is_active": "1",
- "is_explicit": "0",
- "license_description": "creative-commons-attribution",
- "nounji_free": "0",
- "permalink": "/term/stool/2621601",
- "preview_url": "https://static.thenounproject.com/png/2621601-200.png",
- "preview_url_42": "https://static.thenounproject.com/png/2621601-42.png",
- "preview_url_84": "https://static.thenounproject.com/png/2621601-84.png",
- "sponsor": {},
- "sponsor_campaign_link": null,
- "sponsor_id": "",
- "term": "Stool",
- "term_id": 2390,
- "term_slug": "stool",
- "updated_at": "2019-06-18 16:53:45",
- "uploader": {
-     "location": "",
-     "name": "John Winowiecki",
-     "permalink": "/winowiecki",
-     "username": "winowiecki"
- },
- "uploader_id": "82578",
- "year": 2019
- }
- */
