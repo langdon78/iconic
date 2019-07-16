@@ -13,12 +13,16 @@ class ViewController: UIViewController {
     var icons: [Icon] = [] {
         didSet {
             DispatchQueue.main.async {
-                self.collectionView.reloadData()
+                self.collectionView.performBatchUpdates({
+                    let indexRange = (self.icons.count-self.limit...self.icons.count-1).map { IndexPath(item: $0, section: 0) }
+                    self.collectionView.insertItems(at: indexRange)
+                }, completion: nil)
             }
         }
     }
     var nounApiClient = NounAPIClient()
     var page = 1
+    var limit = 50
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +32,7 @@ class ViewController: UIViewController {
     }
     
     func fetchRecentUpdates(for page: Int? = nil) {
-        nounApiClient.recentUploads(limit: 20, page: page) { result in
+        nounApiClient.recentUploads(limit: limit, page: page) { result in
             switch result {
             case .success(let recent): self.icons.append(contentsOf: recent.recentUploads)
             case .failure(let error): print(error)
@@ -46,7 +50,7 @@ extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "iconCell", for: indexPath) as? IconCollectionViewCell
         let icon = icons[indexPath.row]
-        cell?.configure(with: icon)
+        cell?.configure(with: icon, nounApiClient: nounApiClient)
         return cell ?? UICollectionViewCell()
     }
     
@@ -54,7 +58,7 @@ extension ViewController: UICollectionViewDataSource {
 
 extension ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if (indexPath.row == icons.endIndex - 1) {
+        if (indexPath.row == icons.endIndex - 20) {
             page += 1
             fetchRecentUpdates(for: page)
         }

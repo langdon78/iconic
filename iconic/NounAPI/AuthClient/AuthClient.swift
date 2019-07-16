@@ -89,6 +89,7 @@ class OAuthClient: AuthClient {
     }
     
     func sortParameters(for urlComponents: URLComponents) -> [URLQueryItem]? {
+        //https://tools.ietf.org/html/rfc5849#section-3.4.1.3.2
         return urlComponents.queryItems?.sorted { $0.name < $1.name }
     }
     
@@ -123,7 +124,7 @@ class OAuthClient: AuthClient {
                                                  userSecret: nil)
         
         var urlComponents = addOAuthParams(for: urlComponents, credentials: credentials)
-        urlComponents.queryItems = sortParameters(for: urlComponents) //https://tools.ietf.org/html/rfc5849#section-3.4.1.3.2
+        urlComponents.queryItems = sortParameters(for: urlComponents)
         let signature = calculateSignature(urlComponents: urlComponents, httpMethod: httpMethod, credentials: credentials)
         let url = addSignature(with: signature, to: urlComponents)
         var request = URLRequest(url: url)

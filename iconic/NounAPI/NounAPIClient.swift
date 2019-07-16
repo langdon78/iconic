@@ -53,6 +53,7 @@ class NounAPIClient {
                 return
             } else if let data = data {
                 completion(.success(data))
+                return
             }
             completion(.failure(NetworkResponseError.unknown(response)))
         }
@@ -86,6 +87,24 @@ class NounAPIClient {
                 }
             case .failure(let error):
                 completion(.failure(error))
+            }
+        }
+    }
+    
+    func getImage(from urlString: String, completion: @escaping (Data?) -> Void) {
+        guard let url = URL(string: urlString) else {
+            completion(nil)
+            print("\(urlString) not valid")
+            return
+        }
+        var request = URLRequest(url: url)
+        request.httpMethod = HTTPRequestMethod.get.rawValue
+        execute(request) { response in
+            switch response {
+            case .success(let data): completion(data)
+            case .failure(let error):
+                print(error.localizedDescription)
+                completion(nil)
             }
         }
     }

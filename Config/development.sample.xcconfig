@@ -9,7 +9,7 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
-NOUN_URL_SCHEME = http
+NOUN_URL_SCHEME = https
 NOUN_BASE_URL = api.thenounproject.com
 NOUN_API_CONSUMER_KEY = { your_api_consumer_key }
 NOUN_API_CONSUMER_SECRET = { your_api_consumer_secret }
