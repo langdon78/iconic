@@ -8,9 +8,9 @@
 
 import Foundation
 
-class NounAPIClient {
+class NounAPIClient<Auth: AuthClient> where Auth.Credentials == OAuthCredentials {
     
-    var authClient: AuthClient
+    var authClient: Auth
     
     enum HTTPRequestMethod: String {
         case get
@@ -32,7 +32,7 @@ class NounAPIClient {
         case unknown(URLResponse?)
     }
     
-    init(authClient: AuthClient = OAuthClient()) {
+    init(authClient: Auth = OAuthClient() as! Auth) {
         self.authClient = authClient
     }
     
@@ -71,10 +71,15 @@ class NounAPIClient {
                 components.queryItems?.append(URLQueryItem(name: "page", value: String(page)))
             }
         }
+        var request = URLRequest(url: components.url!)
+        request.httpMethod = HTTPRequestMethod.get.uppercaseValue
+        let credentials = OAuthCredentials(consumerKey: Configuration.NounAPI.apiKey,
+                          consumerSecret: Configuration.NounAPI.apiSecret,
+                          userKey: nil,
+                          userSecret: nil)
         
-        let request = authClient.createSignedRequest(from: components,
-                                                     httpMethod: HTTPRequestMethod.get.uppercaseValue)
-
+        request = authClient.createSignedRequest(from: request, credentials: credentials)
+        
         execute(request) { (response: Result<Data, Error>) in
             switch response {
             case .success(let data):

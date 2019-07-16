@@ -12,17 +12,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     var icons: [Icon] = [] {
         didSet {
-            DispatchQueue.main.async {
-                self.collectionView.performBatchUpdates({
-                    let indexRange = (self.icons.count-self.limit...self.icons.count-1).map { IndexPath(item: $0, section: 0) }
-                    self.collectionView.insertItems(at: indexRange)
-                }, completion: nil)
-            }
+            updateCollectionView()
         }
     }
     var nounApiClient = NounAPIClient()
     var page = 1
     var limit = 50
+    var iconIndexRangeToLoad: CountableClosedRange<Int> {
+        return (icons.count - limit)...(icons.count - 1)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +35,15 @@ class ViewController: UIViewController {
             case .success(let recent): self.icons.append(contentsOf: recent.recentUploads)
             case .failure(let error): print(error)
             }
+        }
+    }
+    
+    func updateCollectionView() {
+        DispatchQueue.main.async {
+            self.collectionView.performBatchUpdates({
+                let indexRange = self.iconIndexRangeToLoad.map { IndexPath(item: $0, section: 0) }
+                self.collectionView.insertItems(at: indexRange)
+            }, completion: nil)
         }
     }
 }

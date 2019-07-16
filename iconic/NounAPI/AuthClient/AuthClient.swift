@@ -9,7 +9,19 @@
 import Foundation
 
 protocol AuthClient {
-    func createSignedRequest(from urlComponents: URLComponents, httpMethod: String) -> URLRequest
+    associatedtype Credentials
+    func createSignedRequest(from urlRequest: URLRequest, credentials: Credentials) -> URLRequest
+}
+
+struct OAuthCredentials {
+    var consumerKey: String
+    var consumerSecret: String
+    var userKey: String? = nil
+    var userSecret: String? = nil
+    var rfc5849FormattedSecret: String {
+        // https://tools.ietf.org/html/rfc5849#section-3.4.4
+        return "\(consumerSecret)&\(userSecret ?? "")"
+    }
 }
 
 /// Handles oAuth1.0 authentication
@@ -17,7 +29,7 @@ protocol AuthClient {
 /// https://tools.ietf.org/html/rfc5849#section-3.4.2
 
 class OAuthClient: AuthClient {
-    
+    typealias Credentials = OAuthCredentials
     typealias OAuthQueryParameterValue = String
     typealias OAuthQueryParameters = [OAuthQueryParameterKey: OAuthQueryParameterValue]
     
@@ -28,17 +40,6 @@ class OAuthClient: AuthClient {
         case oauth_version
         case oauth_consumer_key
         case oauth_signature
-    }
-    
-    struct Credentials {
-        var consumerKey: String
-        var consumerSecret: String
-        var userKey: String? = nil
-        var userSecret: String? = nil
-        var rfc5849FormattedSecret: String {
-            // https://tools.ietf.org/html/rfc5849#section-3.4.4
-            return "\(consumerSecret)&\(userSecret ?? "")"
-        }
     }
     
     var currentDateString: () -> String = {
@@ -117,19 +118,19 @@ class OAuthClient: AuthClient {
         return urlComponents.url!
     }
     
-    func createSignedRequest(from urlComponents: URLComponents, httpMethod: String) -> URLRequest {
-        let credentials = Credentials(consumerKey: Configuration.NounAPI.apiKey,
-                                                 consumerSecret: Configuration.NounAPI.apiSecret,
-                                                 userKey: nil,
-                                                 userSecret: nil)
+    func createSignedRequest(from urlRequest: URLRequest, credentials: Credentials) -> URLRequest {
+        guard let url = urlRequest.url,
+            let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false),
+            let httpMethod = urlRequest.httpMethod
+            else { return urlRequest }
         
-        var urlComponents = addOAuthParams(for: urlComponents, credentials: credentials)
-        urlComponents.queryItems = sortParameters(for: urlComponents)
-        let signature = calculateSignature(urlComponents: urlComponents, httpMethod: httpMethod, credentials: credentials)
-        let url = addSignature(with: signature, to: urlComponents)
-        var request = URLRequest(url: url)
-        request.httpMethod = httpMethod
-        return request
+        var urlComponentsWithAuthParams = addOAuthParams(for: urlComponents, credentials: credentials)
+        urlComponentsWithAuthParams.queryItems = sortParameters(for: urlComponentsWithAuthParams)
+        let signature = calculateSignature(urlComponents: urlComponentsWithAuthParams, httpMethod: httpMethod, credentials: credentials)
+        let urlSigned = addSignature(with: signature, to: urlComponentsWithAuthParams)
+        var requestSigned = URLRequest(url: urlSigned)
+        requestSigned.httpMethod = "GET"
+        return requestSigned
     }
     
 }
