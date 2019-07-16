@@ -13,7 +13,7 @@ class IconCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var iconImageView: UIImageView!
     var url: String?
     
-    func configure(with icon: Icon, nounApiClient: NounAPIClient) {
+    func configure(with icon: Icon, nounApiClient: NounAPIClient<OAuth1Client>) {
         self.iconImageView.image = nil
         iconImageView.alpha = 0
         nounApiClient.getImage(from: icon.previewUrl) { [weak self] data in

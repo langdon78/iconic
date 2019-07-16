@@ -15,7 +15,7 @@ class ViewController: UIViewController {
             updateCollectionView()
         }
     }
-    var nounApiClient = NounAPIClient()
+    var nounApiClient = NounAPIClient<OAuth1Client>()
     var page = 1
     var limit = 50
     var iconIndexRangeToLoad: CountableClosedRange<Int> {

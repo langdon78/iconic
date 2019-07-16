@@ -10,10 +10,10 @@ import XCTest
 @testable import iconic
 
 class AuthClientTests: XCTestCase {
-    var authClient: OAuthClient!
+    var authClient: OAuth1Client!
     
     override func setUp() {
-        authClient = OAuthClient()
+        authClient = OAuth1Client()
     }
 
     override func tearDown() {

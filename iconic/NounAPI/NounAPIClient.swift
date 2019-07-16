@@ -32,7 +32,7 @@ class NounAPIClient<Auth: AuthClient> where Auth.Credentials == OAuthCredentials
         case unknown(URLResponse?)
     }
     
-    init(authClient: Auth = OAuthClient() as! Auth) {
+    init(authClient: Auth = OAuth1Client() as! Auth) {
         self.authClient = authClient
     }
     

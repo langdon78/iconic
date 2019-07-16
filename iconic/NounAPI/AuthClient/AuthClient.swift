@@ -28,7 +28,7 @@ struct OAuthCredentials {
 /// specified by RFC 5849.
 /// https://tools.ietf.org/html/rfc5849#section-3.4.2
 
-class OAuthClient: AuthClient {
+class OAuth1Client: AuthClient {
     typealias Credentials = OAuthCredentials
     typealias OAuthQueryParameterValue = String
     typealias OAuthQueryParameters = [OAuthQueryParameterKey: OAuthQueryParameterValue]
