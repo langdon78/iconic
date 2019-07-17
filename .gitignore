@@ -70,3 +70,5 @@ fastlane/test_output
 # Configuration
 development.xcconfig
 production.xcconfig
+
+.DS_Store

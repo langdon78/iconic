@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C68159E22DF555000304312 /* development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 0C68159D22DF555000304312 /* development.xcconfig */; };
 		BCE5D0EE22DA80F10054C4D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D0ED22DA80F10054C4D2 /* AppDelegate.swift */; };
 		BCE5D0F022DA80F10054C4D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D0EF22DA80F10054C4D2 /* ViewController.swift */; };
 		BCE5D0F322DA80F10054C4D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE5D0F122DA80F10054C4D2 /* Main.storyboard */; };
 		BCE5D0F522DA80F20054C4D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE5D0F422DA80F20054C4D2 /* Assets.xcassets */; };
 		BCE5D0F822DA80F20054C4D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE5D0F622DA80F20054C4D2 /* LaunchScreen.storyboard */; };
 		BCE5D10322DA80F20054C4D2 /* EncryptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D10222DA80F20054C4D2 /* EncryptionTests.swift */; };
-		BCE5D11322DA89A60054C4D2 /* development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BCE5D11122DA89A60054C4D2 /* development.xcconfig */; };
 		BCE5D11422DA89A60054C4D2 /* development.sample.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BCE5D11222DA89A60054C4D2 /* development.sample.xcconfig */; };
 		BCE5D11722DA8A5E0054C4D2 /* NounAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D11622DA8A5E0054C4D2 /* NounAPIClient.swift */; };
 		BCE5D11922DB4D120054C4D2 /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D11822DB4D120054C4D2 /* AuthClient.swift */; };
@@ -39,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C68159D22DF555000304312 /* development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = development.xcconfig; sourceTree = "<group>"; };
 		BCE5D0EA22DA80F10054C4D2 /* iconic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iconic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE5D0ED22DA80F10054C4D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE5D0EF22DA80F10054C4D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +50,6 @@
 		BCE5D0FE22DA80F20054C4D2 /* iconicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iconicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE5D10222DA80F20054C4D2 /* EncryptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionTests.swift; sourceTree = "<group>"; };
 		BCE5D10422DA80F20054C4D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BCE5D11122DA89A60054C4D2 /* development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = development.xcconfig; sourceTree = "<group>"; };
 		BCE5D11222DA89A60054C4D2 /* development.sample.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = development.sample.xcconfig; sourceTree = "<group>"; };
 		BCE5D11622DA8A5E0054C4D2 /* NounAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NounAPIClient.swift; sourceTree = "<group>"; };
 		BCE5D11822DB4D120054C4D2 /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
@@ -132,8 +132,8 @@
 		BCE5D11022DA89A60054C4D2 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				BCE5D11122DA89A60054C4D2 /* development.xcconfig */,
 				BCE5D11222DA89A60054C4D2 /* development.sample.xcconfig */,
+				0C68159D22DF555000304312 /* development.xcconfig */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -266,9 +266,9 @@
 			files = (
 				BCE5D0F822DA80F20054C4D2 /* LaunchScreen.storyboard in Resources */,
 				BCE5D0F522DA80F20054C4D2 /* Assets.xcassets in Resources */,
-				BCE5D11322DA89A60054C4D2 /* development.xcconfig in Resources */,
 				BCE5D11422DA89A60054C4D2 /* development.sample.xcconfig in Resources */,
 				BCE5D0F322DA80F10054C4D2 /* Main.storyboard in Resources */,
+				0C68159E22DF555000304312 /* development.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,7 +342,7 @@
 /* Begin XCBuildConfiguration section */
 		BCE5D10522DA80F20054C4D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCE5D11122DA89A60054C4D2 /* development.xcconfig */;
+			baseConfigurationReference = 0C68159D22DF555000304312 /* development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
