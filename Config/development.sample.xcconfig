@@ -9,6 +9,9 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
+// Use this as a template for "development.xcconfig"
+// You will need to create an account at
+// https://api.thenounproject.com for the key/secret
 NOUN_URL_SCHEME = https
 NOUN_BASE_URL = api.thenounproject.com
 NOUN_API_CONSUMER_KEY = { your_api_consumer_key }
