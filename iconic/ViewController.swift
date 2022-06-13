@@ -18,8 +18,12 @@ class ViewController: UIViewController {
     var nounApiClient = NounAPIClient<OAuth1Client>()
     var page = 1
     var limit = 50
-    var iconIndexRangeToLoad: CountableClosedRange<Int> {
-        return (icons.count - limit)...(icons.count - 1)
+    var iconIndexRangeToLoad: Range<Int> {
+        return (icons.count - limit)..<icons.count
+    }
+    
+    var iconIndexPathRangeToLoad: Range<IndexPath> {
+        return IndexPath(item: 5, section: 2)..<IndexPath(item: 3, section: 5)
     }
     
     override func viewDidLoad() {

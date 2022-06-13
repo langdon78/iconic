@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import Keys
+
+fileprivate let keyStore = IconicKeys()
 
 /// App configuration using variables
 /// defined in .xcconfig files, referenced in
@@ -50,7 +53,7 @@ struct Configuration {
         }
         
         static var apiSecret: String {
-            return value(for: .NOUN_API_CONSUMER_SECRET)
+            return keyStore.nOUN_API_CONSUMER_SECRET
         }
         
         private init() {}
