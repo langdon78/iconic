@@ -129,7 +129,7 @@ class OAuth1Client: AuthClient {
         let signature = calculateSignature(urlComponents: urlComponentsWithAuthParams, httpMethod: httpMethod, credentials: credentials)
         let urlSigned = addSignature(with: signature, to: urlComponentsWithAuthParams)
         var requestSigned = URLRequest(url: urlSigned)
-        requestSigned.httpMethod = "GET"
+        requestSigned.httpMethod = httpMethod
         return requestSigned
     }
     
